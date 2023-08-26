@@ -1,0 +1,53 @@
+   
+.foot{
+    background-color: black;
+  }
+  
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    color: pink;
+  }
+  
+  .footer__col h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  .footer__col h3 span {
+    color: red;
+  }
+  
+  .footer__col p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .footer__col p:hover {
+    color: green;
+  }
+  
+  .footer__col p span {
+    font-weight: 600;
+  }
+  
+  .footer__col h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  .footer__bar {
+    max-width: blue;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: yellow;
+    border-top: 1px solid orange;
+  }
+  

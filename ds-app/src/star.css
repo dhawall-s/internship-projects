@@ -1,0 +1,68 @@
+.star{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 70px auto;
+    align-items: center;
+    text-align: center;
+    height: 80vh
+    
+}
+.image{
+    margin-right: 100px;
+    
+  align-items: end;
+  /* transform: rotate(15deg); */
+  
+
+    
+}
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .image {
+    animation: rotate 5s linear infinite; /* 5s duration, linear easing, infinite loop */
+  }
+  .star h1{
+    font-weight: 800;
+    line-height: 102px;
+    font-size: 108px;
+
+  }
+  
+  .star p{
+    font-weight:600 ;
+    color: #bc2424;
+  }
+ 
+.brand-icons{
+    
+    gap: 14px;
+    height: 40px;
+width: 40px;
+}
+
+.star-content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    
+}
+.bm{
+  background-color: black;
+  border: 3px solid green;
+  border-radius: 50px;
+  cursor: pointer;
+transition: background-color 0.3s, color 0.3s;
+}
+.bm:hover {
+  background-color: hotpink;
+  color:blue;
+}
