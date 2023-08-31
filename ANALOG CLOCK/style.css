@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Corrected height value */
+    background: radial-gradient(circle,#0b456b,#021c37);
+}
+.clock{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle,#05263c,#000d1a);
+}
+.clock::before {
+    content:"" ;
+    width: 525px;
+    height: 525px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(#00d9ff,#e0f);
+    box-shadow: 0 0 15px 15px  rgba(0,0,0,0.2) ;
+    z-index:-1;
+
+}
+/* Use classes instead of IDs for styling */
+.number {
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #00d9ff;
+    text-shadow: 0 0 12px #ee00ff;
+
+}
+.number b{
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block; 
+}
+.center-dot{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color:#ee00ff ;
+    border: 6px solid #009d9ff ;
+    border-radius: 50%;
+}
+.hour-hand{
+    --rotate: 0;
+    position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%) rotate(clac(var(--rotate) * 1deg));
+
+  border-radius: 30px 30px 0 0 ;
+  width: 12px;
+  height: 130px;
+  background:linear-gradient(#00d9ff,#ee00ff);
+  transform: translate(-50%) rotate(calc(var(--rotate) * 1deg)); /* Adjusted the rotation calculation */
+  transform-origin: bottom;
+}
+
+.minute-hand{
+    --rotate: 0;
+    position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%) rotate(clac(var(--rotate) * 1deg));
+  background:linear-gradient(to top, #00d9ff,#ee00ff);
+    width: 12px;
+    height: 190px;
+    background-color: blue;
+    transform-origin: bottom center;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg)); /* Adjusted the rotation calculation */
+    border-radius: 30px 30px 0 0 ;
+    transform-origin: bottom;
+} 
+.second-hand{
+    --rotate: 0;
+    position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%) rotate(clac(var(--rotate) * 1deg));
+  background:linear-gradient(to top, #00d9ff,#ee00ff);
+    width: 6px;
+    height: 210px;
+    background-color: red;
+    transform-origin: bottom center;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg)); /* Adjusted the rotation calculation */
+    transform-origin: bottom;
+    border-radius: 30px 30px 0 0 ;
+} 
+ 
+ 
+
