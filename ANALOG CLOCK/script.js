@@ -18,3 +18,18 @@ function rotateClockHand(element, rotation) {
 }
 
 setInterval(clockTick, 1000);
+
+const timeDisplay = document.getElementById('time-display');
+
+function updateTimeDisplay() {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    const currentTime = `${hours}:${minutes}:${seconds}`;
+
+    // Update the time display
+    timeDisplay.querySelector('.current-time').textContent = currentTime;
+}
+
+setInterval(updateTimeDisplay, 1000);
